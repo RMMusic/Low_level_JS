@@ -46,11 +46,9 @@ var strTwo = '11h1g2hnmsdofigdf67hgfgh87fgh8fg87hfghf';
 function numbersCounter (strTwo)
 {
     var number = 0;
-    var x;
-    for (x = 0; x < strTwo.length; x++) {
-        if (Number(parseInt(strTwo[x]))) {
-            number += parseInt(strTwo[x]);
-        }
+    for (var x = 0; x < strTwo.length; x++) {
+        var pars = parseInt(strTwo[x]);
+        if (pars) number += pars;
     }
     return number;
 }
