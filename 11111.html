@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+    <form id="myform">
+        <input type="text" id="myid">
+        <button id="mybutt">Submit</button>
+    </form>
+
+    <script>
+        $("#myform").on('submit', function(event){
+            event.preventDefault();
+            var objToSend = {
+                url: '1.php',
+                data: {testVal: 123},
+                type: "POST",
+                success: function(res) {
+                    console.log(res);
+                },
+                error: function(err) {
+                    console.log(err);
+                }
+            }
+            $.ajax(objToSend);
+        });
+    </script>
+</body>
+</html>

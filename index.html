@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="11.js"></script>
+    <script type="text/javascript">
+        function myFunc () {
+            var properties = document.getElementById("myID").value.split(",");
+            var resultDiv = document.getElementById("result");
+
+            var participants = data.Conference.ParticipantList;
+            var result = [];
+
+
+
+
+
+
+
+
+//            for (var key in participants) {
+//
+//                for (var key1 in participants[key]) {
+//                    console.log(participants[key][key1]);
+////
+//               }}
+//
+//
+//            participants.forEach(function(objData){
+//                var resultObj = {};
+//                properties.forEach(function(prop){
+//                    if (objData.hasOwnProperty(prop)) {
+//                        resultDiv.innerHTML = resultDiv.innerHTML + "<br>" + objData[prop];
+//                        resultObj[prop] = objData[prop];
+//                    }
+//                });
+//                result.push(resultObj);
+//            });
+
+
+
+
+
+
+//            console.log(result);
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="myID">
+<button onclick = myFunc()>Get data</button>
+<div id="result"></div>
+</body>
+</html>
