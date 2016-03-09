@@ -2,11 +2,14 @@
  * Created by admin on 09.03.2016.
  */
 $( document ).ready(function() {
+
     $('body').append("<p style='font-size: 24pt'>.ready()<p>");
+
     $('#clickA').on('click', function( event ) {
         event.preventDefault();
         $(this).find("#clickA1").attr('src',"4.jpg");
     });
+
     //$('#clickS').on('click', function() {
     //    $(this).attr('src',"4.jpg");
     //});
@@ -39,6 +42,7 @@ $( document ).ready(function() {
             $(this).css({color: ""});
         }
     );
-    //end shit
+    //end of shit
+
 });
 
