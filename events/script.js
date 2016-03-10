@@ -5,9 +5,9 @@ $( document ).ready(function() {
 
     $('body').append("<p style='font-size: 24pt'>.ready()<p>");
 
-    $('#clickA').on('click', function( event ) {
+    $('.backgroundImage1').on('click', function( event ) {
         event.preventDefault();
-        $(this).find("#clickA1").attr('src',"4.jpg");
+        $(this).toggleClass('backgroundImage2');
     });
 
     //$('#clickS').on('click', function() {
@@ -28,10 +28,10 @@ $( document ).ready(function() {
     //Ask a question about this shit
     $("span").hover(
         function () {
-            $(this).css({color: "blue"});
+            $(this).toggleClass('blue');
         },
         function () {
-            $(this).css({color: ""});
+            $(this).toggleClass('blue');
         }
     );
     $("span#hover").hover(
@@ -45,4 +45,3 @@ $( document ).ready(function() {
     //end of shit
 
 });
-
