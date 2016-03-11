@@ -44,4 +44,9 @@ $( document ).ready(function() {
     );
     //end of shit
 
+    $('.colorButton').on('click', function( event ) {
+        event.preventDefault();
+        $(this).toggleClass('pushed');
+    });
+
 });
