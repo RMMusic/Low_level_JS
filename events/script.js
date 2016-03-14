@@ -26,7 +26,7 @@ $( document ).ready(function() {
     });
 
     //Ask a question about this shit
-    $("span").hover(
+    $("span.text").hover(
         function () {
             $(this).toggleClass('blue');
         },
@@ -44,9 +44,13 @@ $( document ).ready(function() {
     );
     //end of shit
 
-    $('.colorButton').on('click', function( event ) {
-        event.preventDefault();
+    $('#odd').on('click', function() {
         $(this).toggleClass('pushed');
+        $('table.tableStyle').toggleClass('odd');
+    });
+    $('#even').on('click', function() {
+        $(this).toggleClass('pushed');
+        $('table.tableStyle').toggleClass('even');
     });
 
 });
