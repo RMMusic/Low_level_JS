@@ -85,3 +85,7 @@
     vertical-align: middle;
     background: aquamarine;
 }
+
+.line {
+    background: aquamarine !important;
+}

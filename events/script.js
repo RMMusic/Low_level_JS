@@ -53,4 +53,23 @@ $( document ).ready(function() {
         $('table.tableStyle').toggleClass('even');
     });
 
+    function init() {$('.checkbox').on('click', function(){
+        if($(this).is(':checked'))
+            $(this).parent().parent().toggleClass('line');  // checked
+        else
+            $(this).parent().parent().toggleClass('line');  // unchecked
+    });}
+
+    var size = 5;
+    var table = "<table class='tableStyle'>";
+    for (x=1; x<=size; x++) {
+        table += "<tr id='"+x+"'>";
+        for (y=1; y<=size; y++) table += ("<td x='"+x+"' y='"+y+"'>"+ ((y == 1 )?'<input type="checkbox" class="checkbox">':'') +"</td>");
+        table += ("</tr>");
+    }
+    table += ("</table>");
+    $('#table').html(table).promise().done(function(){
+        init();
+    });
+
 });
